@@ -1,0 +1,8 @@
+.destination {
+	background-color: rgb(120, 145, 145);
+	margin-top: 28px;
+}
+.row {
+	flex-wrap: nowrap;
+	overflow-x: scroll;
+}

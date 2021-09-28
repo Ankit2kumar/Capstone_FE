@@ -1,0 +1,14 @@
+.search {
+	width: 50%;
+	margin-top: 10%;
+	margin-left: 20%;
+}
+#button-search {
+	border-radius: 3rem;
+}
+section {
+	/* background-color: burlywood; */
+}
+.image {
+	border: none;
+}

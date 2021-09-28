@@ -1,0 +1,12 @@
+section.contact-us {
+	background-color: mintcream;
+	height: fit-content;
+}
+.icons {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+h3 {
+	margin-left: 4rem;
+}
