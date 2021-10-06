@@ -6,7 +6,7 @@ const LoginPage = () => {
 	return (
 		<>
 			<section>
-				<Container>
+				<Container className="loginPage">
 					<Row>
 						<div className="container">
 							<div className="main">

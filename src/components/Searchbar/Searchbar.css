@@ -11,4 +11,5 @@ section {
 }
 .image {
 	border: none;
+	object-fit: contain;
 }

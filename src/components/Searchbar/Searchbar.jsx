@@ -1,27 +1,35 @@
 import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 import './Searchbar.css';
 import { InputGroup, Button, FormControl, Card } from 'react-bootstrap';
 import SearchList from '../SearchList/SearchList';
 
-const Searchbar = () => {
-	const [destination, setDestination] = useState('');
+const mapStateToProps = (state) => state;
 
+const mapDispatchToProps = (dispatch) => ({
+	dispatchDestination: (destination) =>
+		dispatch({ type: 'UPDATE_DESTINATION', payload: destination }),
+});
+
+const Searchbar = ({ dispatchDestination, destination }) => {
+	const [searchResults, setResults] = useState([]);
+	//const [destination, setDestination] = useState('');
 	const fetchDestinations = async () => {
 		try {
-			let response = await fetch('http://localhost:3001/destinations');
-			//console.log(response);
+			let response = await fetch('http://localhost:3001/country-details');
+			console.log(response);
 			if (response.ok) {
 				let data = await response.json();
-				//console.log(data);
+				console.log(data);
 
-				const filteredData = data.filter(
-					(element) => element.destination_name === destination
+				const filteredData = setResults(
+					data.filter((element) => element.destination_name === destination)
 				);
-				// console.log(filteredData);
-				filteredData.map((element) => (
-					// (element) => console.log(element)
-					<SearchList value={element}></SearchList>
-				));
+				console.log(filteredData);
+				//filteredData.map((element) => (
+				// (element) => console.log(element)
+				//<SearchList value={element}></SearchList>;
+				//));
 			} else {
 				console.log('something went wrong');
 			}
@@ -36,20 +44,23 @@ const Searchbar = () => {
 
 	const searchDestinations = (e) => {
 		if (e.key === 'Enter') {
-			setDestination(e.target.value);
+			dispatchDestination(e.target.value);
 		}
-		//console.log(destination);
 	};
 
 	return (
 		<>
 			<section>
+				{searchResults.map((result) => (
+					<SearchList value={result}> </SearchList>
+				))}
 				<Card className="bg-dark text-white">
 					<Card.Img
 						src="/LandingImage.jpeg"
 						className="image"
 						alt="Card image"
 					/>
+
 					<Card.ImgOverlay>
 						<InputGroup className="mb-3 search">
 							<FormControl
@@ -69,4 +80,4 @@ const Searchbar = () => {
 		</>
 	);
 };
-export default Searchbar;
+export default connect(mapStateToProps, mapDispatchToProps)(Searchbar);
