@@ -17,13 +17,14 @@ const Searchbar = ({ dispatchDestination, destination }) => {
 	const fetchDestinations = async () => {
 		try {
 			let response = await fetch('http://localhost:3001/country-details');
-			console.log(response);
+			// console.log(response);
 			if (response.ok) {
 				let data = await response.json();
-				console.log(data);
-
+				console.log({ data });
 				const filteredData = setResults(
-					data.filter((element) => element.destination_name === destination)
+					data.filter(
+						(element) => element.countryDetails.country_name === destination
+					)
 				);
 				console.log(filteredData);
 				//filteredData.map((element) => (
