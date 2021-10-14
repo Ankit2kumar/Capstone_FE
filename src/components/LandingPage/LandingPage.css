@@ -1,0 +1,34 @@
+body {
+	background-color: rgb(148, 196, 199);
+	position: absolute;
+}
+.main {
+	position: relative;
+
+	left: 6rem;
+	right: 7rem;
+	top: 5rem;
+	bottom: 0rem;
+	width: 90vw;
+	height: 90vh;
+	background-color: rgb(156, 238, 238);
+	border-radius: 0.3rem;
+}
+.nav {
+	margin-top: 2rem;
+	margin-left: 3rem;
+}
+.navItems {
+	margin-top: 2rem;
+	margin-left: 3rem;
+}
+
+.login {
+	margin-top: 2.5rem;
+	margin-left: 11rem;
+}
+.register {
+	margin-top: 2rem;
+	margin-left: 2rem;
+	background-color: lightgreen;
+}
