@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './CountryHotels.css';
 import {
 	Row,
 	Form,
@@ -8,7 +9,7 @@ import {
 	Tooltip,
 } from 'react-bootstrap';
 
-const CountryRestaurants = () => {
+const CountryHotels = () => {
 	const [viewDataComp, setViewDataComp] = useState(false);
 
 	const [btnState, setBtnState] = useState(false);
@@ -19,29 +20,23 @@ const CountryRestaurants = () => {
 	return (
 		<>
 			<Row className="mb-3 hero-banner">
-				<Form.Group as={Col} md={3}>
-					<Form.Label>Restaurant Name</Form.Label>
-					<Form.Control
-						type="restaurantName"
-						placeholder="Enter restaurant name"
-					/>
+				<Form.Group as={Col} md={3} controlId="formGridEmail">
+					<Form.Label>Hotel Name</Form.Label>
+					<Form.Control type="HotelName" placeholder="Enter Hotel name" />
 				</Form.Group>
 
-				<Form.Group as={Col} md={3}>
-					<Form.Label>Restaurant Address</Form.Label>
-					<Form.Control
-						type="restaurantAddress"
-						placeholder="Enter restaurant address"
-					/>
+				<Form.Group as={Col} md={3} controlId="formGridPassword">
+					<Form.Label>Hotel Address</Form.Label>
+					<Form.Control type="HotelAddress" placeholder="Enter Hotel address" />
 				</Form.Group>
-				<Form.Group as={Col} md={3}>
+				<Form.Group as={Col} md={3} controlId="formGridPassword">
 					<Form.Label>Image URL</Form.Label>
 					<Form.Control type="url" placeholder="Image URL" />
 				</Form.Group>
 				<Form.Group as={Col} md={1}>
 					<OverlayTrigger
 						placement={'right'}
-						overlay={<Tooltip>Click to add more Restaurants</Tooltip>}
+						overlay={<Tooltip>Click to add more Hotels</Tooltip>}
 					>
 						<Button
 							onClick={addMore}
@@ -58,9 +53,9 @@ const CountryRestaurants = () => {
 					</OverlayTrigger>
 				</Form.Group>
 			</Row>
-			{viewDataComp && <CountryRestaurants />}
+			{viewDataComp && <CountryHotels />}
 		</>
 	);
 };
 
-export default CountryRestaurants;
+export default CountryHotels;
