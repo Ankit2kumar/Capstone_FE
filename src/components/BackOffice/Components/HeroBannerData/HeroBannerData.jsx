@@ -12,10 +12,10 @@ import './HeroBannerData.css';
 const HeroBannerData = () => {
 	const [viewDataComp, setViewDataComp] = useState(false);
 
-	const [btnState, setBtnState] = useState(false);
+	const [btnState, setBtnState] = useState(true);
 	const addMore = () => {
 		setViewDataComp(true);
-		setBtnState(true);
+		setBtnState(false);
 	};
 
 	return (
@@ -40,18 +40,19 @@ const HeroBannerData = () => {
 						placement={'right'}
 						overlay={<Tooltip>Click to add more Hero Banner Data</Tooltip>}
 					>
-						<Button
-							onClick={addMore}
-							variant="primary"
-							style={{
-								display: 'flex',
-								justifyContent: 'center',
-								alignItems: 'center',
-							}}
-							disabled={btnState}
-						>
-							+
-						</Button>
+						{btnState && (
+							<Button
+								onClick={addMore}
+								variant="primary"
+								style={{
+									display: 'flex',
+									justifyContent: 'center',
+									alignItems: 'center',
+								}}
+							>
+								+
+							</Button>
+						)}
 					</OverlayTrigger>
 				</Form.Group>
 			</Row>

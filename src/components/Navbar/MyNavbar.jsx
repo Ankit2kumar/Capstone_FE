@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Nav, Button } from 'react-bootstrap';
+import { Nav, Button, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 import './Navbar.css';
@@ -42,18 +42,32 @@ const MyNavbar = () => {
 						<img className="nav-img" src="/TravelExplorer.png" alt="" />
 					</Left>
 					<Centre>
-						<Nav.Link href="#home">Home</Nav.Link>
+						<Nav.Link>
+							<Link to="/">Home </Link>
+						</Nav.Link>
 						<Nav.Link href="#link">Menu</Nav.Link>
 						<Nav.Link href="#link"> About Us</Nav.Link>
 						<Nav.Link href="#link">Contact Us</Nav.Link>
 					</Centre>
 					<Right>
-						<Button variant="outline-secondary">
-							{' '}
-							<Link to="/LoginPage"></Link>
-							LogIn
-						</Button>
-						<Button variant="outline-secondary">SignUp</Button>
+						<NavDropdown title="Profile" id="basic-nav-dropdown">
+							<NavDropdown.Item>
+								<Button variant="outline-secondary">
+									{' '}
+									<Link to="/login">LogIn</Link>
+								</Button>
+							</NavDropdown.Item>
+							<NavDropdown.Item>
+								<Button variant="outline-secondary">SignUp</Button>
+							</NavDropdown.Item>
+
+							<NavDropdown.Divider />
+							<NavDropdown.Item>
+								<Button variant="outline-secondary">
+									<Link to="/backoffice"> Back Office</Link>
+								</Button>
+							</NavDropdown.Item>
+						</NavDropdown>
 					</Right>
 				</Wrapper>
 			</Container>

@@ -11,7 +11,7 @@ import {
 const CountryRestaurants = () => {
 	const [viewDataComp, setViewDataComp] = useState(false);
 
-	const [btnState, setBtnState] = useState(true);
+	const [btnState, setBtnState] = useState(false);
 	const addMore = () => {
 		setViewDataComp(true);
 		setBtnState(true);
@@ -51,7 +51,7 @@ const CountryRestaurants = () => {
 								justifyContent: 'center',
 								alignItems: 'center',
 							}}
-							disabled={btnState}
+							disabled={setBtnState}
 						>
 							+
 						</Button>
