@@ -1,20 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Nav, Button, NavDropdown } from 'react-bootstrap';
+import { Nav, Button, NavDropdown, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 import './Navbar.css';
 
 const Container = styled.div`
-	height: 60px;
-	background-color: lightcyan;
+	/* height: 5vh; */
+	background-color: white;
 `;
 const Wrapper = styled.div`
-	padding: 10px 20px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: lightcyan;
+	background-color: #a1d1e530;
 `;
 const Left = styled.div`
 	flex: 1;
@@ -36,11 +35,17 @@ const Centre = styled.div`
 const MyNavbar = () => {
 	return (
 		<>
-			<Container className="mb-5">
+			<Container>
 				<Wrapper>
-					<Left>
-						<img className="nav-img" src="/TravelExplorer.png" alt="" />
-					</Left>
+					<Navbar.Brand href="#home">
+						<img
+							src="/travelism.png"
+							height="100px"
+							className="d-inline-block align-top"
+							alt="Travelism Logo"
+						/>
+					</Navbar.Brand>
+
 					<Centre>
 						<Nav.Link>
 							<Link to="/">Home </Link>

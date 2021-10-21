@@ -1,103 +1,143 @@
 import React from 'react';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import './LoginPage.css';
-import { Container, Row, Button } from 'react-bootstrap';
+import { FcGlobe, FcCurrencyExchange, FcIdea } from 'react-icons/fc';
 
-const LoginPage = () => {
+import { IconContext } from 'react-icons';
+import { white } from 'material-ui/styles/colors';
+
+function LoginPage() {
 	return (
 		<>
-			<section>
-				<Container className="loginPage">
-					<Row>
-						<div className="container">
-							<div className="main">
-								<div className="inner-box">
-									<div className="card-front">
-										<h2>Sign In</h2>
-										{/* <h5 className="">
-											Hello There! Sign In and start managing your Travel
-										</h5> */}
+			{/* <section id="login">
+				<Container>
+					<Row className="my-flex">
+						<Col sm={5} md={5} lg={5} className="col-1">
+							Hello 1
+						</Col>
+						<Col sm={7} md={7} lg={7} className="col-2">
+							Hello 2
+						</Col>
+					</Row>
+				</Container>
+			</section> */}
 
-										<label>Login</label>
-										<input
-											className=" input_box"
-											type="text"
-											id="log"
-											placeholder="Enter your Email"
-										/>
+			{/* <section className="container">
+				<div className="left-half">
+					<div className="left-sub-half">
+						<div
+							className="my-4"
+							style={{
+								fontSize: '2rem',
+								fontWeight: 'bolder',
+								paddingTop: '4rem',
+							}}
+						>
+							<u style={{ textDecorationColor: '#d15cb8' }}>Travel Explorer</u>
+						</div>
 
-										<label>Password</label>
-										<input
-											className="input_box"
-											type="password"
-											id="pass"
-											placeholder="Enter your Password"
-											name="Password"
-										/>
+						<div className="my-4" style={{ fontSize: '2rem' }}>
+							<p> Explore your next travel </p> <p> destination </p>
+						</div>
 
-										<Button className="btn_signIn" variant="warning">
-											Sign In
-										</Button>
-										<input type="checkbox" />
-										<span> Remember Me </span>
+						<div className="my-5">
+							<IconContext.Provider value={{ size: '3em' }}>
+								<FcGlobe />
+							</IconContext.Provider>
 
-										<Button
-											className="btn_new"
-											variant="info"
-											onClick="openRegister()"
-										>
-											I'm New Here
-										</Button>
-										<h6>
-											<a href="https://www.forgetpassword.com/">
-												{' '}
-												Forgot Password?<strong>RESET</strong>
-											</a>
-										</h6>
-									</div>
-									{/* <div className="card-back">
-										<h2>Register</h2>
-										<label>Your Name</label>
-										<input
-											className=" input_box"
-											type="text"
-											id="log"
-											placeholder="Enter your Name"
-										/>
-										<label>Email</label>
-										<input
-											className=" input_box"
-											type="text"
-											id="log"
-											placeholder="Enter your Email"
-										/>
-										<label>Password</label>
-										<input
-											className=" input_box"
-											type="password"
-											id="log"
-											placeholder="Enter your Password"
-										/>
-										<Button
-											className="btn_new"
-											variant="info"
-											onClick="openLogin()"
-										>
-											I've an account
-										</Button>
-										<h6>
-											<a href="forgetpassword.com">
-												Forgot Password?<strong>RESET</strong>
-											</a>
-										</h6>
-									</div> */}
-								</div>
+							<h4>Best travel website</h4>
+
+							<p style={{ color: 'black' }}>
+								More than 100,000 visitors per day, explore the best you can.
+							</p>
+						</div>
+
+						<div className="my-5">
+							<IconContext.Provider value={{ size: '4em' }}>
+								<FcCurrencyExchange />
+							</IconContext.Provider>
+
+							<h4>Best travel website</h4>
+
+							<p style={{ color: 'black' }}>
+								More than 100,000 visitors per day, explore the best you can.
+							</p>
+						</div>
+						<div className="my-5">
+							<IconContext.Provider value={{ size: '3.5em' }}>
+								<FcIdea />
+							</IconContext.Provider>
+
+							<h4>Best travel website</h4>
+
+							<p style={{ color: 'black' }}>
+								More than 100,000 visitors per day, explore the best you can.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div className="right-half">
+					<div className="right-sub-half">
+						<div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+							<div>
+								{' '}
+								<p style={{ fontWeight: 'bolder' }}>
+									Already have an account?
+								</p>{' '}
+							</div>
+							<div>
+								{' '}
+								<Button variant="light">Sign In</Button>
 							</div>
 						</div>
+						<Container>
+							<Row
+								style={{
+									color: 'black',
+									display: 'flex',
+									justifyContent: 'center',
+									alignItems: 'center',
+								}}
+							>
+								<h2>Create your free account</h2>
+							</Row>
+						</Container>
+					</div>
+				</div>
+			</section> */}
+			<section style={{ position: 'absolute' }}>
+				<Container fluid>
+					<Row>
+						<div
+							style={{
+								width: '200px',
+								height: '200px',
+								backgroundColor: 'white',
+								position: 'relative',
+								top: '50%',
+								left: '50%',
+							}}
+						></div>
+						<Col
+							md={4}
+							sm={4}
+							lg={4}
+							style={{ backgroundColor: 'blue', height: '100vh' }}
+						></Col>
+						<Col
+							md={8}
+							sm={8}
+							lg={8}
+							style={{ backgroundColor: 'black', height: '100vh' }}
+						>
+							2
+						</Col>
 					</Row>
 				</Container>
 			</section>
 		</>
 	);
-};
+}
 
 export default LoginPage;

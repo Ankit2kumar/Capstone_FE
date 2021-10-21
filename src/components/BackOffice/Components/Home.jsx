@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Home.css';
 import HeroBannerData from './HeroBannerData/HeroBannerData';
 import { Form, Row, Col, Button, Container } from 'react-bootstrap';
@@ -9,7 +9,8 @@ const Home = () => {
 	const postData = (e) => {
 		e.preventDefault();
 	};
-
+	const [countryName, setCountryName] = useState('');
+	const [countryDesc, setCountryDesc] = useState('');
 	return (
 		<>
 			<section className="bckOffc-section">
@@ -38,6 +39,8 @@ const Home = () => {
 								<Form.Control
 									type="countryname"
 									placeholder="Enter country name"
+									value={countryName}
+									onChange={(e) => setCountryName(e.target.value)}
 								/>
 							</Form.Group>
 
@@ -46,6 +49,8 @@ const Home = () => {
 								<Form.Control
 									type="countrydescription"
 									placeholder="Enter country description"
+									value={countryDesc}
+									onChange={(e) => setCountryDesc(e.target.value)}
 								/>
 							</Form.Group>
 						</Row>
