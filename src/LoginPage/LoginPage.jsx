@@ -2,27 +2,12 @@ import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import './LoginPage.css';
 import { FcGlobe, FcCurrencyExchange, FcIdea } from 'react-icons/fc';
-
 import { IconContext } from 'react-icons';
-import { white } from 'material-ui/styles/colors';
 
 function LoginPage() {
 	return (
 		<>
-			{/* <section id="login">
-				<Container>
-					<Row className="my-flex">
-						<Col sm={5} md={5} lg={5} className="col-1">
-							Hello 1
-						</Col>
-						<Col sm={7} md={7} lg={7} className="col-2">
-							Hello 2
-						</Col>
-					</Row>
-				</Container>
-			</section> */}
-
-			{/* <section className="container">
+			<section className="container">
 				<div className="left-half">
 					<div className="left-sub-half">
 						<div
@@ -79,12 +64,21 @@ function LoginPage() {
 
 				<div className="right-half">
 					<div className="right-sub-half">
-						<div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-							<div>
-								{' '}
-								<p style={{ fontWeight: 'bolder' }}>
-									Already have an account?
-								</p>{' '}
+						<div
+							style={{
+								display: 'flex',
+								justifyContent: 'flex-end',
+								marginTop: '55px',
+								marginRight: '25px',
+							}}
+						>
+							<div
+								style={{
+									marginTop: '5px',
+									marginRight: '23px',
+								}}
+							>
+								<p>Already have an account?</p>
 							</div>
 							<div>
 								{' '}
@@ -92,49 +86,53 @@ function LoginPage() {
 							</div>
 						</div>
 						<Container>
-							<Row
-								style={{
-									color: 'black',
-									display: 'flex',
-									justifyContent: 'center',
-									alignItems: 'center',
-								}}
-							>
-								<h2>Create your free account</h2>
+							<Row className="pt-5">
+								<Col md={3} lg={3}></Col>
+								<Col>
+									<h2>Create your free account</h2>
+								</Col>
+								<Col md={3} lg={3}></Col>
 							</Row>
+							<Row className="pt-5">
+								<Col md={4} lg={4}></Col>
+								<Col>
+									<Button variant="secondary" size="lg">
+										Sign in with Google
+									</Button>
+								</Col>
+
+								<Col md={4} lg={4}></Col>
+							</Row>
+							<Row className="pt-5">
+								<Col md={4} lg={4}></Col>
+								<Col>
+									<Button variant="secondary" size="lg">
+										Sign in with facebook
+									</Button>
+								</Col>
+
+								<Col md={4} lg={4}></Col>
+							</Row>
+							<Row className="pt-5">
+								<Col md={1} lg={1}></Col>
+								<Col md={4} lg={4}>
+									<hr></hr>
+								</Col>
+								<Col>
+									<span>OR</span>{' '}
+								</Col>
+								<Col md={5} lg={5}>
+									<hr></hr>
+								</Col>
+								<Col md={1} lg={1}></Col>
+							</Row>
+							<Row></Row>
+							<Row></Row>
+							<Row></Row>
+							<Row></Row>
 						</Container>
 					</div>
 				</div>
-			</section> */}
-			<section style={{ position: 'absolute' }}>
-				<Container fluid>
-					<Row>
-						<div
-							style={{
-								width: '200px',
-								height: '200px',
-								backgroundColor: 'white',
-								position: 'relative',
-								top: '50%',
-								left: '50%',
-							}}
-						></div>
-						<Col
-							md={4}
-							sm={4}
-							lg={4}
-							style={{ backgroundColor: 'blue', height: '100vh' }}
-						></Col>
-						<Col
-							md={8}
-							sm={8}
-							lg={8}
-							style={{ backgroundColor: 'black', height: '100vh' }}
-						>
-							2
-						</Col>
-					</Row>
-				</Container>
 			</section>
 		</>
 	);
