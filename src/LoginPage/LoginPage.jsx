@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button, Form } from 'react-bootstrap';
 import './LoginPage.css';
 import { FcGlobe, FcCurrencyExchange, FcIdea } from 'react-icons/fc';
 import { IconContext } from 'react-icons';
@@ -126,8 +126,29 @@ function LoginPage() {
 								</Col>
 								<Col md={1} lg={1}></Col>
 							</Row>
-							<Row></Row>
-							<Row></Row>
+							<Row>
+								<Col md={4} lg={4}></Col>
+								<Col>
+									<Form style={{ borderRadius: '18px' }}>
+										<Form.Group className="mb-3" controlId="formBasicEmail">
+											<Form.Label>Email address</Form.Label>
+											<Form.Control type="email" />
+										</Form.Group>
+									</Form>
+								</Col>
+
+								<Col md={4} lg={4}></Col>
+							</Row>
+							<Row>
+								<Col md={4} lg={4}></Col>
+								<Col className="mt-3">
+									<Button variant="secondary" size="lg">
+										Sign up with email
+									</Button>
+								</Col>
+
+								<Col md={4} lg={4}></Col>
+							</Row>
 							<Row></Row>
 							<Row></Row>
 						</Container>

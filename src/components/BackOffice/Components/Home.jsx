@@ -13,7 +13,7 @@ const Home = () => {
 	const [countryDesc, setCountryDesc] = useState('');
 	return (
 		<>
-			<section className="bckOffc-section">
+			<section className="backOffice-section">
 				<Container>
 					<h3 className="text-primary text-center mb-3">
 						<strong>
@@ -37,7 +37,7 @@ const Home = () => {
 							<Form.Group as={Col} controlId="formGridEmail">
 								<Form.Label>Country name</Form.Label>
 								<Form.Control
-									type="countryname"
+									type="countryName"
 									placeholder="Enter country name"
 									value={countryName}
 									onChange={(e) => setCountryName(e.target.value)}
@@ -47,7 +47,7 @@ const Home = () => {
 							<Form.Group as={Col} controlId="formGridPassword">
 								<Form.Label>Country Description</Form.Label>
 								<Form.Control
-									type="countrydescription"
+									type="countryDescription"
 									placeholder="Enter country description"
 									value={countryDesc}
 									onChange={(e) => setCountryDesc(e.target.value)}
