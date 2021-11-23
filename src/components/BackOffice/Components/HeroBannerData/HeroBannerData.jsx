@@ -106,4 +106,12 @@ const HeroBannerData = () => {
 	);
 };
 
+//Parent component to all Sections
+// Parent component to Hero Banner (will have. state with an array
+// (initial state 1 element only,
+// then after clicking on the + btn, add another element and
+// will render a new hero bannerData))
+// then each son (HeroBannerData will add a new object or array to the request body)
+// Each HeroBannerData will be inside of Hero banner
+
 export default HeroBannerData;

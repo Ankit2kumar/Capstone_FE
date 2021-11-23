@@ -1,82 +1,78 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Nav, Button, NavDropdown, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-
 import './Navbar.css';
-
-const Container = styled.div`
-	/* height: 5vh; */
-	background-color: white;
-`;
-const Wrapper = styled.div`
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-color: #a1d1e530;
-`;
-const Left = styled.div`
-	flex: 1;
-`;
-const Right = styled.div`
-	flex: 1;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-`;
-
-const Centre = styled.div`
-	display: flex;
-	flex: 2;
-	align-items: center;
-	justify-content: center;
-`;
+import {
+	Navbar,
+	Container,
+	Nav,
+	NavDropdown,
+	Form,
+	Button,
+	FormControl,
+} from 'react-bootstrap';
 
 const MyNavbar = () => {
 	return (
-		<>
-			<Container>
-				<Wrapper>
-					<Navbar.Brand href="#home">
-						<img
-							src="/travelism.png"
-							height="100px"
-							className="d-inline-block align-top"
-							alt="Travelism Logo"
-						/>
+		<div className="navBar">
+			<Navbar bg="white" expand="lg">
+				<Container fluid>
+					<Navbar.Brand href="#">
+						<img className=" logo_img" src="/logo.png" alt="Travelism logo" />
 					</Navbar.Brand>
-
-					<Centre>
-						<Nav.Link>
-							<Link to="/">Home </Link>
-						</Nav.Link>
-						<Nav.Link href="#link">Menu</Nav.Link>
-						<Nav.Link href="#link"> About Us</Nav.Link>
-						<Nav.Link href="#link">Contact Us</Nav.Link>
-					</Centre>
-					<Right>
-						<NavDropdown title="Profile" id="basic-nav-dropdown">
-							<NavDropdown.Item>
-								<Button variant="outline-secondary">
-									{' '}
-									<Link to="/login">LogIn</Link>
-								</Button>
-							</NavDropdown.Item>
-							<NavDropdown.Item>
-								<Button variant="outline-secondary">SignUp</Button>
-							</NavDropdown.Item>
-
-							<NavDropdown.Divider />
-							<NavDropdown.Item>
-								<Button variant="outline-secondary">
-									<Link to="/backoffice"> Back Office</Link>
-								</Button>
-							</NavDropdown.Item>
-						</NavDropdown>
-					</Right>
-				</Wrapper>
-			</Container>
-		</>
+					<Navbar.Toggle aria-controls="navbarScroll" />
+					<Navbar.Collapse id="navbarScroll">
+						<Nav
+							className="me-auto my-2 my-lg-0"
+							style={{ maxHeight: '100px' }}
+							navbarScroll
+						>
+							<div className="dropdown">
+								<NavDropdown title="Destinations" id="navbarScrollingDropdown">
+									<NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+									<NavDropdown.Item href="#action4">
+										Another action
+									</NavDropdown.Item>
+									<NavDropdown.Divider />
+									<NavDropdown.Item href="#action5">
+										Something else here
+									</NavDropdown.Item>
+								</NavDropdown>
+								<NavDropdown title="Holiday Ideas" id="navbarScrollingDropdown">
+									<NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+									<NavDropdown.Item href="#action4">
+										Another action
+									</NavDropdown.Item>
+									<NavDropdown.Divider />
+									<NavDropdown.Item href="#action5">
+										Something else here
+									</NavDropdown.Item>
+								</NavDropdown>
+								<NavDropdown
+									title="Weekend Getaways"
+									id="navbarScrollingDropdown"
+								>
+									<NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+									<NavDropdown.Item href="#action4">
+										Another action
+									</NavDropdown.Item>
+									<NavDropdown.Divider />
+									<NavDropdown.Item href="#action5">
+										Something else here
+									</NavDropdown.Item>
+								</NavDropdown>
+							</div>
+						</Nav>
+						<Form className="d-flex">
+							<FormControl
+								type="search"
+								placeholder="Search"
+								className="me-2"
+								aria-label="Search"
+							/>
+							<Button variant="outline-success">Search</Button>
+						</Form>
+					</Navbar.Collapse>
+				</Container>
+			</Navbar>
+		</div>
 	);
 };
 
