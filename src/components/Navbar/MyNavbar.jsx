@@ -5,17 +5,17 @@ import {
 	Nav,
 	NavDropdown,
 	Form,
-	Button,
 	FormControl,
+	Button,
 } from 'react-bootstrap';
 
 const MyNavbar = () => {
 	return (
-		<div className="navBar">
-			<Navbar bg="white" expand="lg">
+		<>
+			<Navbar className="nav-bg" expand="lg">
 				<Container fluid>
-					<Navbar.Brand href="#">
-						<img className=" logo_img" src="/logo.png" alt="Travelism logo" />
+					<Navbar.Brand href="#home">
+						<img className="logo-image" src="/logo.png" alt="Travelism Logo" />
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="navbarScroll" />
 					<Navbar.Collapse id="navbarScroll">
@@ -24,41 +24,18 @@ const MyNavbar = () => {
 							style={{ maxHeight: '100px' }}
 							navbarScroll
 						>
-							<div className="dropdown">
-								<NavDropdown title="Destinations" id="navbarScrollingDropdown">
-									<NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-									<NavDropdown.Item href="#action4">
-										Another action
-									</NavDropdown.Item>
-									<NavDropdown.Divider />
-									<NavDropdown.Item href="#action5">
-										Something else here
-									</NavDropdown.Item>
-								</NavDropdown>
-								<NavDropdown title="Holiday Ideas" id="navbarScrollingDropdown">
-									<NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-									<NavDropdown.Item href="#action4">
-										Another action
-									</NavDropdown.Item>
-									<NavDropdown.Divider />
-									<NavDropdown.Item href="#action5">
-										Something else here
-									</NavDropdown.Item>
-								</NavDropdown>
-								<NavDropdown
-									title="Weekend Getaways"
-									id="navbarScrollingDropdown"
-								>
-									<NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-									<NavDropdown.Item href="#action4">
-										Another action
-									</NavDropdown.Item>
-									<NavDropdown.Divider />
-									<NavDropdown.Item href="#action5">
-										Something else here
-									</NavDropdown.Item>
-								</NavDropdown>
-							</div>
+							<Nav.Link href="#action1">Home</Nav.Link>
+							<Nav.Link href="#action2">About Us</Nav.Link>
+							<NavDropdown title="Destinations" id="navbarScrollingDropdown">
+								<NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+								<NavDropdown.Item href="#action4">
+									Another action
+								</NavDropdown.Item>
+								<NavDropdown.Divider />
+								<NavDropdown.Item href="#action5">
+									Something else here
+								</NavDropdown.Item>
+							</NavDropdown>
 						</Nav>
 						<Form className="d-flex">
 							<FormControl
@@ -72,7 +49,7 @@ const MyNavbar = () => {
 					</Navbar.Collapse>
 				</Container>
 			</Navbar>
-		</div>
+		</>
 	);
 };
 

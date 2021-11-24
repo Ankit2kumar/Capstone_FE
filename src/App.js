@@ -5,8 +5,8 @@ import MyNavbar from './components/Navbar/MyNavbar';
 import { Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import LoginPage from './LoginPage/LoginPage';
-import HomePage from './components/HomePage/HomePage';
+import LoginPage from './pages/LoginPage/LoginPage';
+import HomePage from './pages/HomePage/HomePage';
 import { incrementAction } from './actions';
 import Home from './components/BackOffice/Components/Home';
 
