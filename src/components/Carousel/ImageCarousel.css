@@ -1,3 +1,6 @@
+.carousel > img {
+	object-fit: cover;
+}
 .carousel-indicators {
-	z-index: 0 !important;
+	z-index: 0;
 }
