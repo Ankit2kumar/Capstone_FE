@@ -1,0 +1,27 @@
+.footer-menu {
+	display: flex;
+	background-color: grey;
+}
+.footer-menu-first {
+	margin-left: 58px;
+	margin-top: 18px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+.footer-menu-second {
+	margin-left: 58px;
+	margin-top: 18px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+.footer-menu-third {
+	margin-left: 58px;
+	margin-top: 18px;
+	display: flex;
+}
+.icon-styles {
+	font-size: 20px;
+	font-weight: bolder;
+}

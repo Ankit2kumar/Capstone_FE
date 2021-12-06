@@ -4,3 +4,7 @@
 .carousel-indicators {
 	z-index: 0;
 }
+.carousel-control-next {
+	margin: 0;
+	padding: 0;
+}
