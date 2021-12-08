@@ -22,7 +22,7 @@ function LoginPage() {
 						</div>
 
 						<div className="my-4" style={{ fontSize: '2rem' }}>
-							<p> Explore your next travel </p> <p> destination </p>
+							<p> Explore your next travel destination</p>
 						</div>
 
 						<div className="my-5">

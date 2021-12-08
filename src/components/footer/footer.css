@@ -1,7 +1,3 @@
-* {
-	overflow-x: hidden !important;
-	overflow-y: hidden !important ;
-}
 .footer-menu {
 	display: flex;
 	background-color: grey;
