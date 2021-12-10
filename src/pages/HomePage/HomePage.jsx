@@ -14,10 +14,10 @@ const HomePage = () => {
 		<>
 			<Container fluid>
 				<Row>
-					<Col xs={12} md={12} lg={6} xl={6}>
+					<Col xs={12} md={6} lg={6} xl={6}>
 						<ImageCarousel />
 					</Col>
-					<Col xs={12} md={12} lg={6} xl={6}>
+					<Col xs={12} md={6} lg={6} xl={6}>
 						{/* <HomeRight /> */}
 						<Row>
 							<div className="mt-3">
@@ -37,16 +37,13 @@ const HomePage = () => {
 						</Row>
 
 						<Row className="mt-5 ">
-							<Col md={6} lg={6}>
+							<Col md={2} lg={3} xl={2} style={{ margin: '.5rem' }}>
 								<CardNavigation />
 							</Col>
-							<Col md={6} lg={6}>
+							<Col md={2} lg={3} xl={2} style={{ margin: '.5rem' }}>
 								<CardNavigation />
 							</Col>
-							<Col md={6} lg={6}>
-								<CardNavigation />
-							</Col>
-							<Col md={6} lg={6}>
+							<Col md={2} lg={2} xl={2} style={{ margin: '.5rem' }}>
 								<CardNavigation />
 							</Col>
 						</Row>

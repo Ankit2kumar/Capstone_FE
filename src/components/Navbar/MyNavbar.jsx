@@ -8,6 +8,7 @@ import {
 	FormControl,
 	Button,
 } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const MyNavbar = () => {
 	return (
@@ -24,7 +25,9 @@ const MyNavbar = () => {
 							style={{ maxHeight: '100px' }}
 							navbarScroll
 						>
-							<Nav.Link href="#action1">Home</Nav.Link>
+							<Nav.Link>
+								<Link to="/">Home</Link>
+							</Nav.Link>
 							<Nav.Link href="#action2">About Us</Nav.Link>
 							<NavDropdown title="Destinations" id="navbarScrollingDropdown">
 								<NavDropdown.Item href="#action3">Action</NavDropdown.Item>
